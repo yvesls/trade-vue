@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard de Investimento</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .dashboard {
+            color: white;
+            position: fixed;
+            bottom: -1px;
+            left: 10%;
+            width: 80%;
+            background-color: #456268;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #5f9ea0;
+        }
+        .total-row {
+            font-weight: bold;
+        }
+        
+        .empresas-container {
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .valores-empresa thead {
+            position: sticky;
+            top: 0;
+            background-color: #f5f5f5;
+        }
+        .valores-empresa tfoot {
+            position: sticky;
+            bottom: 0;
+            background-color: #202222;
+            box-shadow: -2px -1px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Valores do Investidor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valor disponível para investimento:</td>
+                    <td>$<span id="valor-disponivel">0</span></td>
+                </tr>
+                <tr>
+                    <td>Valor total investido:</td>
+                    <td>$<span id="valor-total-investido">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="valores-empresa empresas-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Valores por Empresa</th>
+                    </tr>
+                </thead>
+                <tbody class="empresas-container">
+                    <tr>
+                        <td>Empresa A</td>
+                        <td>$<span id="valor-empresa-a">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Empresa B</td>
+                        <td>$<span id="valor-empresa-b">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Empresa B:</td>
+                        <td>$<span id="valor-empresa-b">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Empresa B:</td>
+                        <td>$<span id="valor-empresa-b">0</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td>Somatório Total:</td>
+                        <td>$<span id="somatorio-total">0</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Simulação de atualização dos valores (usando JavaScript) -->
+    <script>
+        // Simulação de valores
+        let valorDisponivel = 5000;
+        let valorTotalInvestido = 1500;
+        let valorEmpresaA = 800;
+        let valorEmpresaB = 700;
+
+        // Atualização dos valores na página
+        document.getElementById('valor-disponivel').textContent = valorDisponivel;
+        document.getElementById('valor-total-investido').textContent = valorTotalInvestido;
+        document.getElementById('valor-empresa-a').textContent = valorEmpresaA;
+        document.getElementById('valor-empresa-b').textContent = valorEmpresaB;
+
+        // Cálculo do somatório total
+        let somatorioTotal = valorDisponivel + valorTotalInvestido + valorEmpresaA + valorEmpresaB;
+        document.getElementById('somatorio-total').textContent = somatorioTotal;
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            width: 500px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #456268;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .compradas {
+            color: green;
+        }
+
+        .indisponiveis {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ações disponíveis</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Empresa</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Petrobras</td>
+                <td>100</td>
+                <td>R$ 25,00</td>
+                <td><button>Comprar</button></td>
+            </tr>
+            <tr>
+                <td>Vale</td>
+                <td>50</td>
+                <td>R$ 40,00</td>
+                <td><button>Comprar</button></td>
+            </tr>
+            <tr class="indisponiveis">
+                <td>Itaú</td>
+                <td>0</td>
+                <td>R$ 30,00</td>
+                <td>Indisponível</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

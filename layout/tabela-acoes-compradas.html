@@ -1,0 +1,82 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            width: 500px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #202222;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .compradas {
+            color: green;
+        }
+
+        .indisponiveis {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ações compradas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Empresa</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="compradas">
+                <td>Itaú</td>
+                <td>10</td>
+                <td>R$ 300,00</td>
+                <td><button>Vender</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
