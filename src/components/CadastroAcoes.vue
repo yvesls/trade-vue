@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      nome: '',
+      nome: '1',
       quantidade: 0,
       preco: 0.01,
     };
