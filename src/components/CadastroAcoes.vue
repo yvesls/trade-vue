@@ -53,7 +53,7 @@ export default {
 
         input {
             display: block;
-            width: 100%;
+            width: 95.5%;
             margin-bottom: 10px;
         }
 

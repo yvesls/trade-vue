@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <MenuPrincipal />
     <CadastroAcoes />
     <CadastroComprador />
     <Dashboard />
@@ -10,12 +11,14 @@
 import CadastroAcoes from '@/components/CadastroAcoes.vue';
 import CadastroComprador from '@/components/CadastroComprador.vue';
 import Dashboard from '@/components/Dashboard.vue';
+import MenuPrincipal from '@/components/MenuPrincipal.vue';
 
 export default {
   components: {
     CadastroAcoes,
     CadastroComprador,
     Dashboard,
+    MenuPrincipal,
   },
 };
 </script>
