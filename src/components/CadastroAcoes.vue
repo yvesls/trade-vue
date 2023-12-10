@@ -3,28 +3,36 @@
     <h1>Cadastro de Ações</h1>
     <form class="input-container" @submit.prevent="cadastrarAcao">
       <label for="nome">Nome da empresa:</label>
-      <input v-model="nome" type="text" id="nome" name="nome" required>
+      <input v-model="empresa" type="text" id="empresa" name="empresa" required>
       <label for="quantidade">Quantidade de ações a serem vendidas:</label>
       <input v-model="quantidade" type="number" id="quantidade" name="quantidade" min="1" required>
       <label for="preco">Preço unitário da ação:</label>
-      <input v-model="preco" type="number" id="preco" name="preco" min="0.01" step="0.01" required>
+      <input v-model="preco" type="number" id="preco" name="preco" min="1" step="1" required>
       <button type="submit">Cadastrar</button>
     </form>
   </div>
 </template>
 
 <script>
+ import {mapActions} from 'vuex'
+
 export default {
   data() {
     return {
-      nome: '1',
-      quantidade: 0,
-      preco: 0.01,
+      empresa: '',
+      quantidade: 1,
+      preco: 10,
     };
   },
   methods: {
+    ...mapActions('acoesEmpresasModule', ['adicionarEmpresa']),
     cadastrarAcao() {
-      console.log('Ação cadastrada:', this.nome, this.quantidade, this.preco);
+        const empresa = {
+            empresa: this.empresa,
+            quantidade: Number(this.quantidade),
+            preco: Number(this.preco),
+        }
+        this.adicionarEmpresa(empresa)
     },
   },
 };
@@ -36,12 +44,12 @@ export default {
         }
 
         h1 {
-            text-align: center;
+            text-align: center  ;
         }
 
         form {
             margin: 20px auto;
-            width: 500px;
+            width: 80%;
             border: 1px solid #ccc;
             padding: 10px;
         }

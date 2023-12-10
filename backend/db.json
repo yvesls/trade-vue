@@ -1,0 +1,87 @@
+{
+  "compradores": [
+    {
+      "cpf": "12315637645",
+      "nome": "Symon Nest",
+      "investimento": 1500,
+      "id": 7,
+      "valorTotalInvestido": 1185,
+      "acoesCompradas": [
+        {
+          "empresa": "Petrobras",
+          "quantidade": 3,
+          "valorTotal": 75
+        },
+        {
+          "empresa": "Vale",
+          "quantidade": 16,
+          "valorTotal": 640
+        },
+        {
+          "empresa": "Itaú",
+          "quantidade": 15,
+          "valorTotal": 450
+        },
+        {
+          "empresa": "Serasa",
+          "quantidade": 2,
+          "valorTotal": 20
+        }
+      ]
+    },
+    {
+      "cpf": "12315632645",
+      "nome": "Summer",
+      "investimento": 100,
+      "id": 22,
+      "valorTotalInvestido": 0
+    },
+    {
+      "cpf": "12345637645",
+      "nome": "Yves Lima",
+      "investimento": 100,
+      "valorTotalInvestido": 0,
+      "id": 24
+    },
+    {
+      "cpf": "31231332112",
+      "nome": "Serasa",
+      "investimento": 100,
+      "valorTotalInvestido": 0,
+      "id": 25,
+      "acoesCompradas": []
+    }
+  ],
+  "acoesEmpresas": [
+    {
+      "id": 1,
+      "empresa": "Petrobras",
+      "quantidade": 41,
+      "preco": 25
+    },
+    {
+      "id": 2,
+      "empresa": "Vale",
+      "quantidade": 51,
+      "preco": 40
+    },
+    {
+      "id": 3,
+      "empresa": "Itaú",
+      "quantidade": 0,
+      "preco": 30
+    },
+    {
+      "empresa": "Serasa",
+      "quantidade": 0,
+      "preco": 10,
+      "id": 4
+    },
+    {
+      "empresa": "Bauduco",
+      "quantidade": 0,
+      "preco": 19,
+      "id": 5
+    }
+  ]
+}

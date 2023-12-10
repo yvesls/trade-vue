@@ -1,32 +1,40 @@
 <template>
     <div>
-      <h1>Login e identificação</h1>
-      <form class="input-container" @submit.prevent="entrar">
+      <h1>Login e Identificação</h1>
+      <form class="input-container" @submit.prevent="adicionar">
         <label for="cpf">CPF:</label>
-        <input v-model="cpf" type="text" id="cpf" name="cpf" required>
+        <input v-model="cpf" type="text" id="cpf" name="cpf" v-model.number="cpf" required>
         <label for="nome">Nome:</label>
-        <input v-model="nome" type="text" id="nome" name="nome" required>
+        <input v-model="nome" type="text" id="nome" name="nome" v-model.number="nome" required>
         <label for="investimento">Valor total de investimento:</label>
-        <input v-model="investimento" type="number" id="investimento" name="investimento" min="0" step="0.01" required>
-        <button type="submit">Entrar</button>
+        <input v-model="investimento" type="number" id="investimento" name="investimento" v-model.number="investimento"  min="0" step="100" required>
+        <button type="submit">Entrar com outro login</button>
       </form>
     </div>
   </template>
   
   <script>
+  import {mapActions} from 'vuex'
+
   export default {
     data() {
       return {
         cpf: '',
         nome: '',
-        investimento: 0,
+        investimento: 100, 
       };
     },
     methods: {
-      entrar() {
-    
-        console.log('Entrando com CPF:', this.cpf, 'e nome:', this.nome, 'Investimento:', this.investimento);
-      },
+      ...mapActions('compradorModule', ['adicionarComprador']),
+      adicionar() {
+          const comprador = {
+              cpf: this.cpf,
+              nome: this.nome,
+              investimento: Number(this.investimento),
+              valorTotalInvestido: 0
+          }
+          this.$store.dispatch('adicionarComprador', comprador)
+      }
     },
   };
   </script>
@@ -42,7 +50,7 @@
 
         form {
             margin: 20px auto;
-            width: 500px;
+            width: 80%;
             border: 1px solid #ccc;
             padding: 10px;
         }
@@ -61,7 +69,6 @@
         button {
             display: block;
             width: 100%;
-            background-color: #0099ff;
             color: white;
             border: none;
             padding: 10px;
@@ -101,7 +108,7 @@
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #5f9ea0;
+            background-color: #202222;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s ease-in-out;
