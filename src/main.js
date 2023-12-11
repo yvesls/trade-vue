@@ -1,6 +1,8 @@
+/* eslint-disable */ 
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store/store'
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -10,5 +12,6 @@ Vue.filter('dinheiro', valor => {
 
 new Vue({
   render: h => h(App),
-  store
+  store,router
+  
 }).$mount('#app')
