@@ -91,7 +91,6 @@ export default {
             border-color: #5f9ea0;
         }
 
-        /* Estilo do botão */
         .input-container button {
             padding: 10px 20px;
             border: none;

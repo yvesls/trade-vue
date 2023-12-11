@@ -130,10 +130,10 @@ export default {
   bottom: -1px;
   left: 10%;
   width: 80%;
-  background-color: #ffffff; /* Fundo branco */
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Bordas leves cinza */
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border-radius: 5px; /* Bordas arredondadas */
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
@@ -142,14 +142,13 @@ export default {
 }
 
 .slide-down-enter-active {
-  transition: transform 0.2s ease-in-out; /* Transição suave */
+  transition: transform 0.2s ease-in-out;
 }
 
 .slide-down-enter {
-  max-height: 0; /* Começa escondido acima */
+  max-height: 0;
 }
 
-/* Estilos para as tabelas */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -176,7 +175,6 @@ th {
   padding: 10px;
 }
 
-/* Estilos para a tabela com scroll */
 .empresas-container {
   max-height: 135px;
   overflow-y: auto;
@@ -196,7 +194,6 @@ th {
   color: white;
 }
 
-/* Estilo para a linha de total */
 .total-row {
   font-weight: bold;
 }
@@ -205,7 +202,6 @@ th {
   width: 50%;
 }
 
-/* Estilos para o botão de toggle */
 .toggle-btn {
   background-color: #202222;
   color: white;
